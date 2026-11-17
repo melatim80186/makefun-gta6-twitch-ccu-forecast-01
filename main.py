@@ -165,9 +165,13 @@ def forecast_case(case, name):
             or any(not (0 < t < 1) for t in levels)):
         raise ValueError(f"{name} asks for levels {case.get('levels')}, not {LEVELS}")
     first = next((k for k in case.get("known", []) if k.get("hour") == 1), None)
-    if first is None:
-        raise ValueError(f"{name} has no hour-1 print")
-    p1 = max(1.0, float(first["viewers"]))
+    try:
+        p1 = max(1.0, float(first["viewers"])) if first is not None else 1.0
+    except (KeyError, TypeError, ValueError):
+        # Missing/null/malformed hour-1 print: per RULES the final is not
+        # graded without a valid hour-1 read, but fall back to p1 = 1
+        # (baseline path) instead of crashing with no output file.
+        p1 = 1.0
     log_p1 = math.log(p1)
 
     # Build the pool: every comparable with a usable release day.
