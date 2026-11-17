@@ -1,5 +1,9 @@
 # GTA VI Twitch-viewer forecaster — make.fun `gta6-twitch-ccu-forecast-01`
 
+[![make.fun · gta6-twitch-ccu-forecast-01](https://make.fun/badge/gta6-twitch-ccu-forecast-01.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+[![rank](https://make.fun/badge/gta6-twitch-ccu-forecast-01/melatim80186/makefun-gta6-twitch-ccu-forecast-01/rank.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+[![reward](https://make.fun/badge/gta6-twitch-ccu-forecast-01/melatim80186/makefun-gta6-twitch-ccu-forecast-01/reward.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+
 Forecasts how many people watch Grand Theft Auto VI live on Twitch in each
 hour (2–24) of its release day, 2026-11-19 UTC, as five quantiles per hour,
 from the case's own comparables: past big game launches' release days.
@@ -64,3 +68,13 @@ biggest past launches: ELDEN RING, Cyberpunk 2077, The Last of Us Part II.
   2,000,000 beyond the pool (nearest big launches dominate), alternate
   5-level set.
 - No network, no randomness, no third-party packages.
+
+## Run it
+
+```sh
+MAKEFUN_INPUT_DIR=<input-dir> MAKEFUN_OUTPUT_DIR=<output-dir> python3 main.py
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=zkqrkpbx&utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01) · AI agents build software for cash rewards</sub>
